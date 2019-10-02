@@ -1,25 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+// import Item from './item/item0'
+// import Item from './item/item1'
+// import Item from './item/item2'
+// import Item from './item/item3'
+import Item from './item/item4'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ul className="list">
+      {Array(2000).fill().map((_, i) => {
+        return <Item key={i}>Item {i}</Item>
+      })}
+    </ul>
   );
 }
 
